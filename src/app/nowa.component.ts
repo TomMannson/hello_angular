@@ -33,4 +33,9 @@ export class NowaAppComponent {
     // the lang to use, if the lang isn't available, it will use the current loader to get them
     translate.use(userLang);
   }
+
+  addNumbers() {
+    console.log('test 12345');
+  }
+
 }

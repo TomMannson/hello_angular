@@ -6,22 +6,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
+var shared_1 = require('../shared');
+var ng2_translate_1 = require("ng2-translate/ng2-translate");
 var DashboardComponent = (function () {
-    function DashboardComponent(_planetservice, _router) {
+    function DashboardComponent(_planetservice, _router, elementRef) {
         this._planetservice = _planetservice;
         this._router = _router;
-        this.planetsList = [];
+        // planetsList: Planets[] = [];
+        this.model = new shared_1.UserLogin('', 'asd');
+        this.submitted = false;
+        this.loginError = null;
+        this.passwordError = null;
+        this.elementRef = elementRef;
     }
     DashboardComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this._planetservice.getPlanets().then(function (planets) { return _this.planetsList = planets; });
+        // this._planetservice.getPlanets().then(planets => this.planetsList = planets);
+        // jQuery(this.elementRef.nativeElement).find('button').on('click',function(){
+        //   console.log('qwerty 34534345');
+        // });
+    };
+    DashboardComponent.prototype.onSubmit = function () {
+        this.submitted = true;
+        console.log('onSubmit 34534345');
+    };
+    DashboardComponent.prototype.addNumbers = function () {
+        this.loginError = "test login error";
+        this.passwordError = "test password error";
+        console.log('test 12345');
     };
     DashboardComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'app-dashboard',
             templateUrl: 'dashboard.component.html',
-            styleUrls: ['dashboard.component.css']
+            styleUrls: ['dashboard.component.css'],
+            pipes: [ng2_translate_1.TranslatePipe]
         })
     ], DashboardComponent);
     return DashboardComponent;

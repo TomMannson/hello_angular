@@ -21,6 +21,9 @@ var NowaAppComponent = (function () {
         // the lang to use, if the lang isn't available, it will use the current loader to get them
         translate.use(userLang);
     }
+    NowaAppComponent.prototype.addNumbers = function () {
+        console.log('test 12345');
+    };
     NowaAppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

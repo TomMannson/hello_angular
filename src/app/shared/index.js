@@ -4,4 +4,5 @@ function __export(m) {
 }
 __export(require('./planets.model'));
 __export(require('./planets.service'));
+__export(require('./userlogin.model'));
 //# sourceMappingURL=index.js.map

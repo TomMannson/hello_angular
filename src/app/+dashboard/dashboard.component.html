@@ -1,6 +1,6 @@
-<br>
+<!--<br>
 <div class="ui cards" >
-<div class="card" *ngFor="let planet of planetsList">  
+<div class="card" *ngFor="let planet of planetsList">
   <div class="content">
     <a class="header">{{planet.name}}</a>
     <div class="meta">
@@ -9,6 +9,35 @@
     <div class="description">
       {{planet.description}}
     </div>
-  </div>  
+  </div>
 </div>
+</div>-->
+<div class="loginWrapper">
+  <div class="loginWindow">
+    <div class="loginWindowHeader">
+      Login
+    </div>
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+      <div class="inputLoginFieldWrapper">
+        <input type="text" [(ngModel)]="model.name" placeholder="email" required ngControl="name" #name="ngForm">
+        <div [hidden]="name.valid || name.pristine" class="errorMessageLoginInputField">
+          {{'loginscreen_emptyloginfield' | translate}}
+        </div>
+      </div>
+      <div class="inputLoginFieldWrapper">
+        <input type="password" [(ngModel)]="model.password" placeholder="password" required ngControl="password" #password="ngForm">
+        <div [hidden]="password.valid || password.pristine" class="errorMessageLoginInputField">
+          {{'loginscreen_emptypasswordfield' | translate}}
+        </div>
+      </div>
+      <div class="recoverPassword">
+        Forgot your password? <span class="recoverPasswordButton">RECOVER</span>
+      </div>
+      <div class="buttonWrapper">
+        <button type="submit" class="button" [disabled]="!heroForm.form.valid">
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
