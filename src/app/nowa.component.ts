@@ -16,4 +16,9 @@ import { PlanetsService } from './shared';
 ])
 export class NowaAppComponent {
   title = 'nowa works!';
+
+  addNumbers() {
+    console.log('test 12345');
+  }
+
 }

@@ -1,6 +1,6 @@
-<br>
+<!--<br>
 <div class="ui cards" >
-<div class="card" *ngFor="let planet of planetsList">  
+<div class="card" *ngFor="let planet of planetsList">
   <div class="content">
     <a class="header">{{planet.name}}</a>
     <div class="meta">
@@ -9,6 +9,33 @@
     <div class="description">
       {{planet.description}}
     </div>
-  </div>  
+  </div>
 </div>
+</div>-->
+<div class="loginWrapper">
+  <div class="loginWindow">
+    <div class="loginWindowHeader">
+      Login
+    </div>
+    <div class="inputLoginFieldWrapper">
+      <input type="text" name="login" placeholder="email">
+      <div *ngIf="loginError" class="errorMessageLoginInputField">
+        {{loginError}}
+      </div>
+    </div>
+    <div class="inputLoginFieldWrapper">
+      <input type="text" name="password" placeholder="password">
+      <div *ngIf="passwordError" class="errorMessageLoginInputField">
+        {{passwordError}}
+      </div>
+    </div>
+    <div class="recoverPassword">
+      Forgot your password? <span class="recoverPasswordButton">RECOVER</span>
+    </div>
+    <div class="buttonWrapper">
+      <button class="button" (click)="addNumbers()">
+        Login
+      </button>
+    </div>
+  </div>
 </div>
