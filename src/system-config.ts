@@ -25,6 +25,7 @@ const barrels: string[] = [
 
   // Thirdparty barrels.
   'rxjs',
+  'ng2-translate',
 
   // App specific barrels.
   'app',
@@ -46,6 +47,7 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
+    'ng2-translate': 'vendor/ng2-translate',
     'main': 'main.js'
   },
   packages: cliSystemConfigPackages

@@ -3,5 +3,6 @@
 </h3>
 <nav>
   <a [routerLink]="['dashboard']">Dashboard</a>
+  <div>{{ 'HELLO' | translate:{value: param} }}</div>
 </nav>
 <router-outlet></router-outlet>
